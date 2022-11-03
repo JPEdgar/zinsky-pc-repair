@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/zinsky-pc-repair/static/css/main.c59cc657.css",
-    "main.js": "/zinsky-pc-repair/static/js/main.e442aab1.js",
+    "main.js": "/zinsky-pc-repair/static/js/main.f9306ad0.js",
     "index.html": "/zinsky-pc-repair/index.html",
     "main.c59cc657.css.map": "/zinsky-pc-repair/static/css/main.c59cc657.css.map",
-    "main.e442aab1.js.map": "/zinsky-pc-repair/static/js/main.e442aab1.js.map"
+    "main.f9306ad0.js.map": "/zinsky-pc-repair/static/js/main.f9306ad0.js.map"
   },
   "entrypoints": [
     "static/css/main.c59cc657.css",
-    "static/js/main.e442aab1.js"
+    "static/js/main.f9306ad0.js"
   ]
 }
