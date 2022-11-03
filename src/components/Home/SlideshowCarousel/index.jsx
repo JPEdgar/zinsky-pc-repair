@@ -15,7 +15,6 @@ const SlideshowCarousel = () => {
   });
 
   const handleClick = (modalData) => {
-    console.log("modalShow = ", modalShow);
     setModalShow(true);
     setModalContent(modalData);
   };
