@@ -1,5 +1,6 @@
 import React from "react";
 
+import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
 
 export default function Welcome() {
@@ -13,7 +14,7 @@ export default function Welcome() {
         ipsum incidunt officiis, dignissimos est debitis voluptate tempora
         porro?
       </p>
-      <Button variant="primary">Learn More</Button>{" "}
+      <Button as={Link} to="/about" variant="primary">Learn More</Button>{" "}
     </div>
   );
 }

@@ -1,0 +1,58 @@
+[
+  {
+    "id": 0,
+    "title": "New Computer",
+    "body": "Build a new computer.",
+    "image": "/images/ComputerSetup.jpg",
+    "link": "/contact",
+    "state": {
+      "buildFlag": true,
+      "repairFlag": false,
+      "restoreFlag": false,
+      "otherFlag": false,
+      "otherDescription": "I need help in building a new computer."
+    }
+  },
+  {
+    "id": 1,
+    "title": "Computer Repairs",
+    "body": "Computer repairs.",
+    "image": "/images/ComputerRepair.jpg",
+    "link": "/contact",
+    "state": {
+      "buildFlag": false,
+      "repairFlag": true,
+      "restoreFlag": false,
+      "otherFlag": false,
+      "otherDescription": "I need help with computer repair."
+    }
+  },
+  {
+    "id": 2,
+    "title": "Data Recovery",
+    "body": "Restore files from a damaged hard drive.",
+    "image": "/images/DataRecovery.jpg",
+    "link": "/contact",
+    "state": {
+      "buildFlag": false,
+      "repairFlag": false,
+      "restoreFlag": true,
+      "otherFlag": false,
+      "otherDescription": "I need help recovering data from my computer."
+    }
+  },
+  {
+    "id": 3,
+    "title": "Consoltation",
+    "body": "What do you need?",
+    "image": "/images/Consoltation.jpg",
+    "link": "/contact",
+    "state": {
+      "buildFlag": false,
+      "repairFlag": false,
+      "restoreFlag": false,
+      "otherFlag": true,
+      "otherDescription": "I'd like to discuss some other issue."
+    }
+  }
+]

@@ -1,0 +1,35 @@
+[
+  {
+    "id": 0,
+    "title": "Don't replace it, repair it!",
+    "body": "See if you can save money with some maintenance/repair.",
+    "image": "/images/SaveMoney.jpg",
+    "modalData": {
+      "title": "Don't replace it, repair it!",
+      "header": "See if you can save money with some maintenance/repair.",
+      "body": "You may not need a new computer.  Sometimes, all that's wrong with your system is a simple fix.  Whether it's a virus or damaged hardware, you can save hundreds or even thousands of dollars simply by contacting us!"
+    }
+  },
+  {
+    "id": 1,
+    "title": "Time to add some sprinkles.",
+    "body": "Do you need some upgrades?",
+    "image": "/images/TimeToUpgrade.jpg",
+    "modalData": {
+      "title": "Time to add some sprinkles.",
+      "header": "Do you need some upgrades?",
+      "body": "With all the software updates, your system will gradually have less and less available memory.  Let's figure out how to get your system working again with some upgrades!  In addition, some of those upgrades can be transferred to a future system to save you even more money!"
+    }
+  },
+  {
+    "id": 2,
+    "title": "Replace an old system.",
+    "body": "Is it time for a new system?",
+    "image": "/images/ComputerCommunications.jpg",
+    "modalData": {
+      "title": "Replace an old system.",
+      "header": "Is it time for a new system?",
+      "body": "On average, people replace their computers once every three years.  Even though we strive to save you money, a new computer is sometimes the only option.  Let us help you get what you need at the lowest cost by getting you what you want and need."
+    }
+  }
+]

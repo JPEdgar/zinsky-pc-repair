@@ -3,7 +3,7 @@ import React from "react";
 import { Navbar, Nav, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-export default function Navigation() {
+const Navigation = () => {
   return (
     <>
       <Navbar
@@ -11,10 +11,13 @@ export default function Navigation() {
         variant="dark"
         className="justify-content-between"
         expand="md"
+        sticky="top"
       >
-        <Navbar.Brand href="#home">
-          <Image src="https://picsum.photos/100" className="mx-2" rounded />
-          Zinsky's PC Repair
+        <Navbar.Brand>
+          <Nav.Link as={Link} to="/">
+            <Image src="https://picsum.photos/100" className="mx-2" rounded />
+            Zinsky's PC Repair
+          </Nav.Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -33,4 +36,6 @@ export default function Navigation() {
       </Navbar>
     </>
   );
-}
+};
+
+export default Navigation;
