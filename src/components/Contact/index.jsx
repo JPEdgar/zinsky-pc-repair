@@ -113,7 +113,8 @@ const Contact = () => {
       <div className="mb-2">
         <Button
           variant="primary"
-          type="submit"
+          // type="submit" // production
+          type="button" // dev
           className="me-2"
           style={{ minWidth: "100px" }}
         >

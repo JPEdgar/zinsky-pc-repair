@@ -3,7 +3,7 @@
     "id": 0,
     "title": "New Computer",
     "body": "Build a new computer.",
-    "image": "/zinsky-pc-repair/images/ComputerSetup.jpg",
+    "image": "/images/ComputerSetup.jpg",
     "link": "/contact",
     "state": {
       "buildFlag": true,
@@ -17,7 +17,7 @@
     "id": 1,
     "title": "Computer Repairs",
     "body": "Computer repairs.",
-    "image": "/zinsky-pc-repair/images/ComputerRepair.jpg",
+    "image": "/images/ComputerRepair.jpg",
     "link": "/contact",
     "state": {
       "buildFlag": false,
@@ -31,7 +31,7 @@
     "id": 2,
     "title": "Data Recovery",
     "body": "Restore files from a damaged hard drive.",
-    "image": "/zinsky-pc-repair/images/DataRecovery.jpg",
+    "image": "/images/DataRecovery.jpg",
     "link": "/contact",
     "state": {
       "buildFlag": false,
@@ -45,7 +45,7 @@
     "id": 3,
     "title": "Consoltation",
     "body": "What do you need?",
-    "image": "/zinsky-pc-repair/images/Consoltation.jpg",
+    "image": "/images/Consoltation.jpg",
     "link": "/contact",
     "state": {
       "buildFlag": false,
