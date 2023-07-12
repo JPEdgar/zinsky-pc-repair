@@ -4,7 +4,8 @@ import { Container, Row } from "react-bootstrap";
 
 import Testamony from "./Testamony";
 
-import TestamonyData from "../../../data-dev/Testimonials.json";
+import TestamonyData from "../../../data/Testimonials.json";
+// import TestamonyData from "../../../data-dev/Testimonials.json";
 
 const Testimonials = () => {
   return (

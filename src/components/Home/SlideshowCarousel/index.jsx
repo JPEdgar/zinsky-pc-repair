@@ -4,7 +4,8 @@ import { Carousel, Row, Image, Button } from "react-bootstrap";
 
 import CarouselModal from "./CarouselModal";
 
-import CarouselData from "../../../data-dev/CarouselData.json";
+import CarouselData from "../../../data/CarouselData.json";
+// import CarouselData from "../../../data-dev/CarouselData.json";
 
 const SlideshowCarousel = () => {
   const [modalShow, setModalShow] = useState(false);

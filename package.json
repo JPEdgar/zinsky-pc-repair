@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Zinsky's PC Repair and Configurations",
   "main": "index.js",
-
+  "homepage": "http://jpedgar.com/zinsky-pc-repair/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
     "@fortawesome/free-regular-svg-icons": "^6.2.0",
