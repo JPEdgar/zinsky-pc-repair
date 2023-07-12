@@ -3,7 +3,7 @@ import React from "react";
 import { Container, Row, Col, Card, Button, Image } from "react-bootstrap";
 import Service from "./Service";
 
-import ServicesData from "../../../data/ServicesData.json";
+import ServicesData from "../../../data-dev/ServicesData.json";
 
 const Services = () => {
   return (
