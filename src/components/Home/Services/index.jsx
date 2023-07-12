@@ -7,18 +7,14 @@ import ServicesData from "../../../data-dev/ServicesData.json";
 
 const Services = () => {
   return (
-    <Container>
-      <Row
-        // style={{ backgroundColor: "#cfe0fc" }}
-      
-        className="justify-content-evenly"
-      >
+    <>
+      <Row className="justify-content-evenly">
         {ServicesData &&
           ServicesData.map((data) => (
             <Service key={`Services-${data.id}`} data={data} />
           ))}
       </Row>
-    </Container>
+    </>
   );
 };
 

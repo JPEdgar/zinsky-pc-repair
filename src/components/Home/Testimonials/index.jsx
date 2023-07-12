@@ -8,7 +8,7 @@ import TestamonyData from "../../../data-dev/Testimonials.json";
 
 const Testimonials = () => {
   return (
-    <Container>
+    <>
       <Row>
         {TestamonyData.map((data) =>
           data.id < 3 ? (
@@ -16,7 +16,7 @@ const Testimonials = () => {
           ) : null
         )}
       </Row>
-    </Container>
+    </>
   );
 };
 
