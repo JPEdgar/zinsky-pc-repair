@@ -11,8 +11,8 @@ const Home = () => {
   return (
     <>
       <SlideshowCarousel />
-      <Services />
       <Welcome />
+      <Services />
       <Testimonials />
     </>
   );
