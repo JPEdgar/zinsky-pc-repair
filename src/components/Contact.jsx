@@ -16,13 +16,13 @@ const Contact = () => {
   };
 
   return (
-    <Form>
+    <Form style={{ minHeight: "100vh" }}>
       <Form.Group as={Row} className="my-2">
         <Col xs="12" md="6">
           <Form.Label className="mb-0">First Name</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Enter first name"  
+            placeholder="Enter first name"
             name="firstName"
             value={formInfo.firstName}
             onChange={handleChange}
