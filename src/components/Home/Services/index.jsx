@@ -9,7 +9,8 @@ const Services = () => {
   return (
     <Container>
       <Row
-        style={{ backgroundColor: "blue" }}
+        // style={{ backgroundColor: "#cfe0fc" }}
+      
         className="justify-content-evenly"
       >
         {ServicesData &&
