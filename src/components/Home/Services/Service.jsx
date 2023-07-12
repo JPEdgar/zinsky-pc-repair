@@ -6,10 +6,10 @@ import { Col, Button, Row, Image } from "react-bootstrap";
 import { useFormContext } from "../../../context/FormContext";
 
 const Service = ({ data }) => {
-  const {setFormInfo} = useFormContext()
+  const { setFormInfo } = useFormContext();
 
   const handleClick = (state) => {
-    setFormInfo(curr => ({...curr, ...state}))
+    setFormInfo((curr) => ({ ...curr, ...state }));
   };
 
   return (
@@ -19,7 +19,7 @@ const Service = ({ data }) => {
         sm={6}
         lg={4}
         style={{ backgroundColor: "white", borderRadius: "15px" }}
-        className="m-4 my-2 pb-4"
+        className="m-2 py-1"
       >
         <Row className="justify-content-center d-none d-sm-flex">
           <Image src={data.image} />
@@ -30,10 +30,7 @@ const Service = ({ data }) => {
         <Row>
           <p>{data.body}</p>
         </Row>
-        <div
-          style={{ backgroundColor: "orange" }}
-          className="d-flex justify-content-center"
-        >
+        <div className="d-flex justify-content-center">
           <Button
             variant="primary"
             as={Link}
