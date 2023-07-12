@@ -1,12 +1,14 @@
 import React from "react";
 
-import {Col} from "react-bootstrap"
+import { Col } from "react-bootstrap";
 
-export default function Testamony() {
+export default function Testamony({ data }) {
   return (
-    <Col className="mt-1" >
-      <h4>Client Name</h4>
-      <h5>Client Statement</h5>
+    <Col className="mt-1">
+      <div>From: {data.name}</div>
+      {data.data.map((testamony) => (
+        <div>{testamony}</div>
+      ))}
     </Col>
   );
 }
