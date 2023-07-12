@@ -1,14 +1,20 @@
 import React from "react";
 
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Navbar } from "react-bootstrap";
 
 const Footer = () => {
   return (
-    <Container>
-      <Row className="text-light bg-dark">
-        <Col>Copyright &copy;2016-2023, Zinsky's PC Repair and Configuarations. All rights reserved.</Col>
-      </Row>
-    </Container>
+    <Navbar
+      bg="dark"
+      variant="dark"
+      className="justify-content-between"
+      sticky="bottom"
+    >
+      <div className="text-light bg-dark align-items-center px-2">
+        Copyright &copy;2016-2023, Zinsky's PC Repair and Configuarations. All
+        rights reserved.
+      </div>
+    </Navbar>
   );
 };
 
