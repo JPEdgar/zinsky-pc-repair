@@ -7,7 +7,7 @@ export default function Testamony({ data }) {
     <Col className="mt-1">
       <div>From: {data.name}</div>
       {data.data.map((testamony) => (
-        <div>{testamony}</div>
+        <div key={testamony}>{testamony}</div>
       ))}
     </Col>
   );
