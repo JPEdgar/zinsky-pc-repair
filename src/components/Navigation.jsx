@@ -31,6 +31,9 @@ const Navigation = () => {
             <Nav.Link as={Link} to="/about">
               About
             </Nav.Link>
+            <Nav.Link as={Link} to="/resources">
+              Resources
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

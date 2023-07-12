@@ -8,6 +8,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Navigation from "./components/Navigation";
 // import SocialMedia from "./components/SocialMedia";
+import Resources from "./components/Resources";
 import Footer from "./components/Footer";
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/resources" element={<Resources/>}/>
       </Routes>
 
       {/* <SocialMedia /> */}
