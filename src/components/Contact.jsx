@@ -63,11 +63,12 @@ const Contact = () => {
       </Form.Group>
 
       <Form.Text className="text-muted">
-        We'll never share your email or phone number with anyone else.
+        We'll <b className="me-1">never</b>
+        share any of your information with anyone else.
       </Form.Text>
 
       <Form.Group className="my-3">
-        <Form.Text>How can I help?</Form.Text>
+      <Form.Label className="mb-0">How can I help?</Form.Label>
         <Form.Check
           type="checkbox"
           label="Build a PC"

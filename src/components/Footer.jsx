@@ -6,9 +6,13 @@ const Footer = () => {
   return (
     <div className="text-light bg-dark align-items-center px-2 sticky-bottom">
       <div>
-        Copyright &copy;2016-2023, Zinsky's PC Repair and Configurations.
+        <small>
+          Copyright &copy;2016-2023, Zinsky's PC Repair and Configurations.
+        </small>
       </div>
-      <div>All rights reserved.</div>
+      <div>
+        <small>All rights reserved.</small>
+      </div>
     </div>
   );
 };
