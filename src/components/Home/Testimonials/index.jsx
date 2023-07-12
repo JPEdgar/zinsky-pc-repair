@@ -6,14 +6,18 @@ import Testamony from "./Testamony";
 
 import TestamonyData from "../../../data-dev/Testimonials.json";
 
-export default function index() {
+const Testimonials = () => {
   return (
     <Container>
       <Row xs="12" md="6" lg="4" style={{ backgroundColor: "green" }}>
-        {TestamonyData.map((data) => (
-          <Testamony key={`testamony-key-${data.id}`} data={data} />
-        ))}
+        {TestamonyData.map((data) =>
+          data.id < 3 ? (
+            <Testamony key={`testamony-key-${data.id}`} data={data} />
+          ) : null
+        )}
       </Row>
     </Container>
   );
-}
+};
+
+export default Testimonials;

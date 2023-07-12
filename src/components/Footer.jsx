@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <Container>
       <Row className="text-light bg-dark">
-        <Col>Copyright.......</Col>
+        <Col>Copyright &copy;2016-2023, Zinsky's PC Repair and Configuarations. All rights reserved.</Col>
       </Row>
     </Container>
   );

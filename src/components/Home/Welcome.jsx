@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
 
-export default function Welcome() {
+const Welcome = () => {
   return (
     <div style={{ backgroundColor: "orange" }}>
       <h2 className="mx-auto">Welcome</h2>
@@ -14,7 +14,11 @@ export default function Welcome() {
         ipsum incidunt officiis, dignissimos est debitis voluptate tempora
         porro?
       </p>
-      <Button as={Link} to="/about" variant="primary">Learn More</Button>{" "}
+      <Button as={Link} to="/about" variant="primary">
+        Learn More
+      </Button>
     </div>
   );
-}
+};
+
+export default Welcome;

@@ -2,11 +2,10 @@ import React, { useState, useEffect } from "react";
 
 import { Form, Button, Row, Col } from "react-bootstrap";
 
-import { useFormContext } from "../../context/FormContext";
+import { useFormContext } from "../context/FormContext";
 
 const Contact = () => {
   const { formInfo, setFormInfo, clearForm } = useFormContext();
-
   const handleChange = (e) => {
     setFormInfo((curr) => ({ ...curr, [e.target.name]: e.target.value }));
   };
@@ -23,7 +22,7 @@ const Contact = () => {
           <Form.Label className="mb-0">First Name</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Enter first name"
+            placeholder="Enter first name"  
             name="firstName"
             value={formInfo.firstName}
             onChange={handleChange}
@@ -120,7 +119,12 @@ const Contact = () => {
         >
           Submit
         </Button>
-        <Button variant="warning" type="button" style={{ minWidth: "100px" }} onClick={(() => clearForm())}>
+        <Button
+          variant="warning"
+          type="button"
+          style={{ minWidth: "100px" }}
+          onClick={() => clearForm()}
+        >
           Clear
         </Button>
       </div>
