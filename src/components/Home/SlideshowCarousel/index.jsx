@@ -3,11 +3,14 @@ import React, { useState } from "react";
 import { Carousel, Row, Image, Button } from "react-bootstrap";
 
 import CarouselModal from "./CarouselModal";
-
+import { useSiteContext } from "../../../context/SiteContext";
 import CarouselData from "../../../data/CarouselData.json";
-// import CarouselData from "../../../data-dev/CarouselData.json";
+import CarouselData_Dev from "../../../data-dev/CarouselData.json";
 
 const SlideshowCarousel = () => {
+  const { devFlag } = useSiteContext();
+  const carouselData = devFlag ? CarouselData_Dev : CarouselData;
+
   const [modalShow, setModalShow] = useState(false);
   const [modalContent, setModalContent] = useState({
     title: "",
@@ -24,8 +27,8 @@ const SlideshowCarousel = () => {
     <>
       <Row>
         <Carousel className="d-none d-md-block" style={{ height: "300px" }}>
-          {CarouselData &&
-            CarouselData.map((data) => (
+          {carouselData &&
+            carouselData.map((data) => (
               <Carousel.Item key={`CarouselItem-${data.id}`}>
                 <Image
                   src={data.image}
