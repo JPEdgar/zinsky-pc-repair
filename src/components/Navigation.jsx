@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { Navbar, Nav, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const Navigation = () => {
+  const [expandNav, setExpandNav] = useState(false);
+
+  const toggleExpand = () => {
+    if (expandNav) closeNav();
+    else openNav();
+  };
+
+  const closeNav = () => {
+    setExpandNav(false);
+  };
+
+  const openNav = () => {
+    setExpandNav(true);
+  };
+
   return (
     <>
       <Navbar
@@ -11,6 +26,8 @@ const Navigation = () => {
         variant="dark"
         className="justify-content-between"
         expand="md"
+        expanded={expandNav}
+        onClick={() => toggleExpand()}
         sticky="top"
       >
         <Navbar.Brand>
@@ -19,8 +36,12 @@ const Navigation = () => {
             Zinsky's PC Repair
           </Nav.Link>
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Toggle
+          className="me-2"
+          aria-controls="navigation-bar"
+          onClick={() => closeNav()}
+        />
+        <Navbar.Collapse id="navigation-bar" className="ps-2">
           <Nav>
             <Nav.Link as={Link} to="/">
               Home

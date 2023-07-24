@@ -11,10 +11,22 @@ import Navigation from "./components/Navigation";
 import Resources from "./components/Resources";
 import Footer from "./components/Footer";
 
+import "./styles/styles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
-  return (
+  const constructionFlag = false;
+  return constructionFlag ? (
+    <>
+      <h1>Zinsky's PC Repair</h1>
+      <h3>
+        Building PCs, service, and repairs for clients in the Rancho
+        Cordova/Sacramento, California area since 2008.
+      </h3>
+      <h3 style={{ color: "red" }}>Website under construction</h3>
+      <h5>Coming soon.</h5>
+    </>
+  ) : (
     <Container>
       <Navigation />
       <Routes>

@@ -15,25 +15,20 @@ const Service = ({ data }) => {
   return (
     <>
       <Col xs={12} sm={6} lg={3} className="justify-content-center d-flex">
-        <Card style={{ width: "18rem" }} className="my-2">
+        <Card
+          className="my-2 cardBody cardText"
+          as={Link}
+          to="/contact"
+          onClick={() => handleClick(data.state)}
+        >
           <Card.Img
             variant="top"
             src={data.image}
             className="d-none d-sm-flex mt-2 px-2"
           />
           <Card.Body>
-            <Card.Title>{data.title}</Card.Title>
-
-            <Card.Text style={{ minHeight: "40px" }}>{data.body}</Card.Text>
-
-            <Button
-              variant="primary"
-              as={Link}
-              to="/contact"
-              onClick={() => handleClick(data.state)}
-            >
-              Link to service
-            </Button>
+            <Card.Title className="textTitle">{data.title}</Card.Title>
+            <Card.Text className="cardText textBody">{data.body}</Card.Text>
           </Card.Body>
         </Card>
       </Col>

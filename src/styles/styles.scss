@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Lunasima&family=Merriweather&display=swap");
+
+$serifFont: "Merriweather", serif;
+$sanserifFont: "Lunasima", sans-serif;
+
+$primaryColor: #436c99;
+$secondaryColor: #d2e4fa;
+$gray: #454552;
+$cardHoverBackground: cyan;
+
+// general reset
+* {
+  font-family: $sanserifFont;
+  color: $gray;
+  margin: 0;
+  padding: 0;
+}
+
+// general/text
+.textTitle {
+  font-size: 1.5rem !important;
+  font-family: $serifFont;
+}
+
+.textBody {
+  font-size: 1rem;
+  line-height: 1.4rem;
+}
+
+.textStrokeLight {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+    -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+// welcome block (<md screen size)
+.textSlogan {
+  font-size: 2rem;
+}
+
+.welcomeText {
+  color: green;
+}
+
+// carousel (>=md screen size)
+.carouselMain {
+  height: 300px;
+}
+
+.carouselCaption {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carouselImage {
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.carouselHeader {
+  font-size: 1.6rem;
+}
+
+.carouselSubheader {
+  font-size: 1.1rem;
+}
+
+// service cards
+.cardText {
+  text-decoration: none;
+}
+
+.cardBody {
+  width: 18rem;
+}
+
+.cardBody:hover {
+  background-color: $cardHoverBackground;
+  animation: cardHover 0.5s;
+}
+
+// testamonies
+.testamoniesTitle {
+  font-size: 1.25rem;
+  margin-top: 0.6rem;
+}
+
+.testamoniesBody {
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+// animations
+@keyframes cardHover {
+  from {
+    background-color: white;
+  }
+  to {
+    background-color: $cardHoverBackground;
+  }
+}

@@ -26,24 +26,23 @@ const SlideshowCarousel = () => {
   return (
     <>
       <Row>
-        <Carousel className="d-none d-md-block" style={{ height: "300px" }}>
+        <Carousel className="d-none d-md-block carousel_main">
           {carouselData &&
             carouselData.map((data) => (
               <Carousel.Item key={`CarouselItem-${data.id}`}>
-                <Image
-                  src={data.image}
-                  style={{
-                    maxHeight: "300px",
-                    objectFit: "cover",
-                  }}
-                  className="w-100"
-                />
-                <Carousel.Caption
-                  style={{ backgroundColor: "rgba(0,0,0,0.5)" }}
-                >
-                  <h3>{data.title}</h3>
-                  <p>{data.body}</p>
-                  <Button onClick={() => handleClick(data.modalData)}>
+                <Image src={data.image} className="w-100 carousel_image" />
+                <Carousel.Caption className="carousel_caption">
+                  <div className="carousel_header text_stroke_light">
+                    {data.title}
+                  </div>
+                  <div className="carousel_subheader text_stroke_light">
+                    {data.body}
+                  </div>
+                  <Button
+                    className="my-1"
+                    variant="info"
+                    onClick={() => handleClick(data.modalData)}
+                  >
                     Learn More
                   </Button>
                 </Carousel.Caption>

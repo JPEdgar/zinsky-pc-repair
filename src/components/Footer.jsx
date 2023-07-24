@@ -4,10 +4,10 @@ import { Container, Row, Col, Navbar } from "react-bootstrap";
 
 const Footer = () => {
   return (
-    <div className="text-light bg-dark align-items-center px-2 sticky-bottom">
+    <div className="text-light bg-dark align-items-center px-2">
       <div>
         <small>
-          Copyright &copy;2016-2023, Zinsky's PC Repair and Configurations.
+          Copyright &copy;2008-2023, Zinsky's PC Repair and Configurations.
         </small>
       </div>
       <div>
