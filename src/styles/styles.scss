@@ -6,7 +6,9 @@ $sanserifFont: "Lunasima", sans-serif;
 $primaryColor: #436c99;
 $secondaryColor: #d2e4fa;
 $gray: #454552;
-$cardHoverBackground: cyan;
+$lightBlue: #b5ecec;
+$yellow: #ffff30;
+$lightYellow: #f7efdf;
 
 // general reset
 * {
@@ -27,10 +29,17 @@ $cardHoverBackground: cyan;
   line-height: 1.4rem;
 }
 
-.textStrokeLight {
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+.textShadow {
   text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
     -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.textStrokeLight {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+}
+
+.textStrokeDark- {
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.5);
 }
 
 // welcome block (<md screen size)
@@ -57,10 +66,12 @@ $cardHoverBackground: cyan;
 }
 
 .carouselHeader {
+  color: $yellow;
   font-size: 1.6rem;
 }
 
 .carouselSubheader {
+  color: $lightYellow;
   font-size: 1.1rem;
 }
 
@@ -74,7 +85,7 @@ $cardHoverBackground: cyan;
 }
 
 .cardBody:hover {
-  background-color: $cardHoverBackground;
+  background-color: $lightBlue;
   animation: cardHover 0.5s;
 }
 
@@ -95,6 +106,6 @@ $cardHoverBackground: cyan;
     background-color: white;
   }
   to {
-    background-color: $cardHoverBackground;
+    background-color: $lightBlue;
   }
 }

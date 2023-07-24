@@ -7,8 +7,12 @@ const Navigation = () => {
   const [expandNav, setExpandNav] = useState(false);
 
   const toggleExpand = () => {
-    if (expandNav) closeNav();
-    else openNav();
+    // 768px
+    // console.log(window.innerWidth);
+    if (window.innerWidth < 768) {
+      if (expandNav) closeNav();
+      else openNav();
+    }
   };
 
   const closeNav = () => {
@@ -18,6 +22,10 @@ const Navigation = () => {
   const openNav = () => {
     setExpandNav(true);
   };
+
+  function getSnapshot() {
+    return { width: window.innerWidth, height: window.innerHeight };
+  }
 
   return (
     <>

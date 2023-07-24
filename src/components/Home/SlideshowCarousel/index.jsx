@@ -26,16 +26,16 @@ const SlideshowCarousel = () => {
   return (
     <>
       <Row>
-        <Carousel className="d-none d-md-block carousel_main">
+        <Carousel className="d-none d-md-block carouselMain">
           {carouselData &&
             carouselData.map((data) => (
               <Carousel.Item key={`CarouselItem-${data.id}`}>
-                <Image src={data.image} className="w-100 carousel_image" />
-                <Carousel.Caption className="carousel_caption">
-                  <div className="carousel_header text_stroke_light">
+                <Image src={data.image} className="w-100 carouselImage" />
+                <Carousel.Caption className="carouselCaption">
+                  <div className="carouselHeader textStrokeLight textShadow">
                     {data.title}
                   </div>
-                  <div className="carousel_subheader text_stroke_light">
+                  <div className="carouselSubheader textStrokeDark textShadow">
                     {data.body}
                   </div>
                   <Button

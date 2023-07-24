@@ -16,9 +16,16 @@
   line-height: 1.4rem;
 }
 
+.textShadow {
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
 .textStrokeLight {
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
-  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.textStrokeDark- {
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.5);
 }
 
 .textSlogan {
@@ -43,10 +50,12 @@
 }
 
 .carouselHeader {
+  color: #ffff30;
   font-size: 1.6rem;
 }
 
 .carouselSubheader {
+  color: #f7efdf;
   font-size: 1.1rem;
 }
 
@@ -59,7 +68,7 @@
 }
 
 .cardBody:hover {
-  background-color: cyan;
+  background-color: #b5ecec;
   animation: cardHover 0.5s;
 }
 
@@ -78,6 +87,6 @@
     background-color: white;
   }
   to {
-    background-color: cyan;
+    background-color: #b5ecec;
   }
 }
