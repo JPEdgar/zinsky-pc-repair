@@ -27,7 +27,7 @@ const Service = ({ data }) => {
             className="d-none d-sm-flex mt-2 px-2"
           />
           <Card.Body>
-            <Card.Title className="textTitle">{data.title}</Card.Title>
+            <Card.Title className="textTitle serviceTitle">{data.title}</Card.Title>
             <Card.Text className="cardText textBody">{data.body}</Card.Text>
           </Card.Body>
         </Card>

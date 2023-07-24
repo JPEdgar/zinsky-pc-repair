@@ -6,6 +6,7 @@ $sanserifFont: "Lunasima", sans-serif;
 $primaryColor: #436c99;
 $secondaryColor: #d2e4fa;
 $gray: #454552;
+$lightGray: #ececf3;
 $lightBlue: #b5ecec;
 $yellow: #ffff30;
 $lightYellow: #f7efdf;
@@ -86,7 +87,11 @@ $lightYellow: #f7efdf;
 
 .cardBody:hover {
   background-color: $lightBlue;
-  animation: cardHover 0.5s;
+  animation: cardHover 0.7s;
+}
+
+.serviceTitle {
+  color: $primaryColor;
 }
 
 // testamonies
@@ -98,6 +103,16 @@ $lightYellow: #f7efdf;
 .testamoniesBody {
   font-size: 0.9rem;
   font-style: italic;
+}
+
+// footer
+.footer {
+  background-color: darkgray;
+}
+
+.footerText {
+  color: $lightGray;
+  font-size: 0.8rem;
 }
 
 // animations

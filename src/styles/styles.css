@@ -69,7 +69,11 @@
 
 .cardBody:hover {
   background-color: #b5ecec;
-  animation: cardHover 0.5s;
+  animation: cardHover 0.7s;
+}
+
+.serviceTitle {
+  color: #436c99;
 }
 
 .testamoniesTitle {
@@ -80,6 +84,15 @@
 .testamoniesBody {
   font-size: 0.9rem;
   font-style: italic;
+}
+
+.footer {
+  background-color: darkgray;
+}
+
+.footerText {
+  color: #ececf3;
+  font-size: 0.8rem;
 }
 
 @keyframes cardHover {
