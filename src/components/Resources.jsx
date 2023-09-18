@@ -2,54 +2,65 @@ import React from "react";
 
 const Resources = () => {
   return (
-    <div style={{ minHeight: "100vh" }}>
-      <div className="mb-3">Protect Yourself While On-Line</div>
-      <div className="mb-3">
-        Make sure you have an up to date Antivirus. Scan Regularly. There are
-        many free versions:
+    <div style={{ minHeight: "100vh" }} className="d-flex flex-column gap-3">
+      <div>Use Microsoft Windows Security for your anti-virus software.</div>
+      {/* If you're on a tight budget, use Windwos Defender.
+      
+
+      My personal opinon Windows Defender /only/:
+      It's decent, but no where near good enough to protect a computer.  
+      This comment could potentially compromise a small business's data integrity.  However, paired with malwarebytes, it /might/ be enough.
+
+      Questions to ask Alan:
+      What about avast?
+      What about personal PCs vs. small businesses?
+      Do you do...
+        * data backups?
+        * cloud storage setups?
+      You're certified w/ BEAR.  What benefit, if any, does that provide?
+      Do you have any other certifications?  A+, Security+, Network+, etc?
+
+
+      */}
+      <div>
+        It is provided by Microsoft and comes with the latest Microsoft Windows
+        operating systems, which, of course, comes with the latest off the shelf
+        computers and custom computers with Microsoft Windows installed.
+      </div>
+      <div>
+        I recommend using Microsoft Windows Security, as opposed to mainstream,
+        “Big Box” Anti-virus software.
+      </div>
+      <div>Use Malwarebytes Anti-Malware.</div>
+      <div>
+        <div>The link below is a direct software download.</div>
+        <div>
+          <a
+            href="https://www.malwarebytes.com/mwb-download/thankyou"
+            rel="noreferrer"
+            target="_blank"
+          >
+            Click here to go to Malwarebytes
+          </a>
+        </div>
+      </div>
+      <div>
+        Installing Malwarebytes gives you a 14 day trial with full protection
+        However you can use the scanner software manually, after the 14 day
+        trial period, for free.
+      </div>
+      <div>
+        <div>How to install and run a scan with Malwarebytes Free</div>
         <ul>
-          <li>AVAST</li>
-          <li>
-            AVG (Avg is starting to become a resource hog. Requires a lot of
-            RAM.)
-          </li>
-          <li>Antivir</li>
+          <li>Download Malwarebytes for Windows.</li>
+          <li>Double-click on the Malwarebytes setup file.</li>
+          <li>Follow the on-screen prompts to install Malwarebytes.</li>
+          <li>Click on “Scan”.</li>
+          <li>Wait for the Malwarebytes scan to complete</li>
+          <li>Click on “Quarantine”.</li>
+          <li>Restart computer.</li>
         </ul>
       </div>
-      <div className="mb-3">
-        Make sure you have a software firewall and if you are on broadband, get
-        behind a NAT router. There are also free versions of software firewalls:
-        <ul>
-          <li>Kerio</li>
-          <li>Sygate</li>
-          <li>Zone Alarm</li>
-        </ul>
-      </div>
-      <div className="mb-3">
-        Keep Windows up to date. Visit Windows Update and Office Update
-        regularly.
-      </div>
-      <div className="mb-3">
-        Keep all of your software up to date. You can check on your software
-        with the Secunia Software Inspector. Sign up for e-mail notification and
-        they will tell you when to check your system again.
-      </div>
-      <div className="mb-3">Use Firefox with the NoScript extension as your web browser.</div>
-      <div className="mb-3">
-        Download, install and keep an updated version of SpywareBlaster.
-      </div>
-      <div className="mb-3">Do NOT click on links in any Instant Messaging program.</div>
-      <div className="mb-3">Use Thunderbird in place of Outlook or Outlook Express.</div>
-      <div className="mb-3">
-        Use Foxit Reader with the PDF Download extension instead of Adobe
-        Acrobat Reader.
-      </div>
-      <div className="mb-3">
-        DO NOT open attachments from ANYONE. Download them, and scan them with
-        your Antivirus software before opening and only if you expect to receive
-        them.
-      </div>
-      <div className="mb-3">If you use IE download a copy of IE-Spyad.</div>
     </div>
   );
 };

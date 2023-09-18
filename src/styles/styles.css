@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lunasima&family=Merriweather&display=swap");
 * {
   font-family: "Lunasima", sans-serif;
-  color: #454552;
+  color: #262626;
   margin: 0;
   padding: 0;
 }
@@ -73,7 +73,7 @@
 }
 
 .serviceTitle {
-  color: #436c99;
+  color: #42A1BF;
 }
 
 .testamoniesTitle {

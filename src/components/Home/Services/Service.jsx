@@ -14,7 +14,7 @@ const Service = ({ data }) => {
 
   return (
     <>
-      <Col xs={12} sm={6} lg={3} className="justify-content-center d-flex">
+      <Col xs={12} sm={6} lg={4} className="justify-content-center d-flex">
         <Card
           className="my-2 cardBody cardText"
           as={Link}

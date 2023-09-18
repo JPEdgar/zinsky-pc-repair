@@ -54,5 +54,19 @@
       "otherFlag": true,
       "otherDescription": "I'd like to discuss some other issue."
     }
+  },
+  {
+    "id": 4,
+    "title": "Smart Home",
+    "body": "Ready to set up voice activation for your home?",
+    "image": "/zinsky-pc-repair/images/SmartHome.jpg",
+    "link": "/contact",
+    "state": {
+      "buildFlag": false,
+      "repairFlag": false,
+      "restoreFlag": false,
+      "otherFlag": true,
+      "otherDescription": "I'd like to set up my home for voice commands."
+    }
   }
 ]

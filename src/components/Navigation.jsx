@@ -3,6 +3,9 @@ import React, { useState } from "react";
 import { Navbar, Nav, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
+// import Logo from "../images/Zinsky Logo Vertical Alt.svg"
+const Logo = "https://picsum.photos/100"
+
 const Navigation = () => {
   const [expandNav, setExpandNav] = useState(false);
 
@@ -39,9 +42,17 @@ const Navigation = () => {
         sticky="top"
       >
         <Navbar.Brand>
-          <Nav.Link as={Link} to="/">
-            <Image src="https://picsum.photos/100" className="mx-2" rounded />
-            Zinsky's PC Repair
+          <Nav.Link as={Link} to="/" className="d-flex align-items-center">
+            <Image src={Logo} className="mx-2" rounded />
+            <span className="text-light">
+              
+            <div className="text-light">
+                Zinsky's PC Repair
+              </div>
+              <div className="text-light fs-6">Serving you since 2008</div>
+              
+              </span>
+            
           </Nav.Link>
         </Navbar.Brand>
         <Navbar.Toggle

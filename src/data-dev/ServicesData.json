@@ -29,7 +29,7 @@
   },
   {
     "id": 2,
-    "title": "Data Recovery",
+    "title": "Data/Hard Drive Backup/Recovery",
     "body": "Restore files from a damaged hard drive.",
     "image": "/images/DataRecovery.jpg",
     "link": "/contact",
@@ -44,7 +44,7 @@
   {
     "id": 3,
     "title": "Consoltation",
-    "body": "What do you need?",
+    "body": "Let's talk about your needs.",
     "image": "/images/Consoltation.jpg",
     "link": "/contact",
     "state": {
@@ -53,6 +53,20 @@
       "restoreFlag": false,
       "otherFlag": true,
       "otherDescription": "I'd like to discuss some other issue."
+    }
+  },
+  {
+    "id": 4,
+    "title": "Smart Home",
+    "body": "Ready to set up voice activation for your home?",
+    "image": "/images/SmartHome.jpg",
+    "link": "/contact",
+    "state": {
+      "buildFlag": false,
+      "repairFlag": false,
+      "restoreFlag": false,
+      "otherFlag": true,
+      "otherDescription": "I'd like to set up my home for voice commands."
     }
   }
 ]
