@@ -7,7 +7,7 @@ const useSiteContext = () => {
 };
 
 const SiteProvider = ({ children }) => {
-  const devFlag = false;
+  const devFlag = true;
 
   return (
     <SiteContext.Provider value={{ devFlag }}>{children}</SiteContext.Provider>
