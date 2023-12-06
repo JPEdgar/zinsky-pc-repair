@@ -9,7 +9,7 @@ const useCompanyContext = () => {
 const CompanyProvider = ({ children }) => {
   const companyInfo = {
     email: "Zinsky.PCRepair@gmail.com",
-    phoneNumber: "(916) 555-1212",
+    phoneNumber: "(916) 622-2269",
     webAddress: "ZinskyPCRepair.com"
   }
 

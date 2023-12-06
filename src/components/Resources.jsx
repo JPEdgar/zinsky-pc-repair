@@ -7,38 +7,6 @@ import UpdateIcon from "./elements/UpdateIcon";
 const Resources = () => {
   return (
     <div style={{ minHeight: "100vh" }} className="d-flex flex-column gap-3">
-      {/* 
-      
-      
-      If you're on a tight budget, use Windwos Defender.
-      
-      
-      My personal opinon Windows Defender /only/:
-      It's decent, but no where near good enough to protect a computer.  
-      This comment could potentially compromise a small business's data integrity.  However, paired with malwarebytes, it /might/ be enough.
-      
-      Questions to ask Alan:
-      What about avast?
-      starting to use a lot of resources
-      
-      What about personal PCs vs. small businesses?
-      Do you do...
-      * data backups?
-      * cloud storage setups?
-      * 
-      * can set it up
-      *
-      You're certified w/ BEAR.  What benefit, if any, does that provide?
-      a state registration
-      
-      Do you have any other certifications?  A+, Security+, Network+, etc?
-      
-      add phone number to contact page
-      
-      add "Call now" or something else above carousel on homepage w/ phone number
-      
-    */}
-
       <div>Use Microsoft Windows Security for your anti-virus software.</div>
 
       <div>

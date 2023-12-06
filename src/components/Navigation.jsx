@@ -4,7 +4,9 @@ import { Navbar, Nav, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 // import Logo from "../images/Zinsky Logo Vertical Alt.svg"
-const Logo = "https://picsum.photos/100"
+// const Logo = "https://picsum.photos/100"
+import HorzLogo from "../images/Logo_Zinsky_Outside.svg";
+import VertLogo from "../images/Logo_Zinsky_Inside.svg";
 
 const Navigation = () => {
   const [expandNav, setExpandNav] = useState(false);
@@ -42,24 +44,31 @@ const Navigation = () => {
         sticky="top"
       >
         <Navbar.Brand>
-          <Nav.Link as={Link} to="/" className="d-flex align-items-center">
-            <Image src={Logo} className="mx-2" rounded />
-            <span className="text-light">
-              
-            <div className="text-light">
-                Zinsky's PC Repair
-              </div>
-              <div className="text-light fs-6">Serving you since 2008</div>
-              
-              </span>
-            
+          <Nav.Link as={Link} to="/" className="d-block align-items-center">
+            <div>
+              <Image
+                src={HorzLogo}
+                height={130}
+                width={360}
+                className="d-none d-md-flex mx-2 "
+                style={{ objectFit: "cover" }}
+              />
+              <Image
+                src={VertLogo}
+                height={180}
+                width={180}
+                className="d-md d-md-none mx-2 "
+                style={{ objectFit: "cover" }}
+              />
+            </div>
+        
+            <div className="text-light fs-6 text-center">
+              Serving you since 2008
+            </div>
+       
           </Nav.Link>
         </Navbar.Brand>
-        <Navbar.Toggle
-          className="me-2"
-          aria-controls="navigation-bar"
-          onClick={() => closeNav()}
-        />
+        <Navbar.Toggle className="me-2" aria-controls="navigation-bar" onClick={() => closeNav()} />
         <Navbar.Collapse id="navigation-bar" className="ps-2">
           <Nav>
             <Nav.Link as={Link} to="/">
