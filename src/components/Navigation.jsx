@@ -3,8 +3,6 @@ import React, { useState } from "react";
 import { Navbar, Nav, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-// import Logo from "../images/Zinsky Logo Vertical Alt.svg"
-// const Logo = "https://picsum.photos/100"
 import HorzLogo from "../images/Logo_Zinsky_Outside.svg";
 import VertLogo from "../images/Logo_Zinsky_Inside.svg";
 
@@ -35,8 +33,8 @@ const Navigation = () => {
   return (
     <>
       <Navbar
-        bg="dark"
-        variant="dark"
+        bg="light"
+        variant="light"
         className="justify-content-between"
         expand="md"
         expanded={expandNav}
@@ -62,7 +60,7 @@ const Navigation = () => {
               />
             </div>
         
-            <div className="text-light fs-6 text-center">
+            <div className="fs-6 text-center">
               Serving you since 2008
             </div>
        
