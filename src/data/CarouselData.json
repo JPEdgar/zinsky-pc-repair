@@ -3,7 +3,7 @@
     "id": 0,
     "title": "Don't replace it, repair it!",
     "body": "See if you can save money with some maintenance/repair.",
-    "image": "/zinsky-pc-repair/images/SaveMoney.jpg",
+    "image": "images/SaveMoney.jpg",
     "modalData": {
       "title": "Don't replace it, repair it!",
       "header": "See if you can save money with some maintenance/repair.",
@@ -14,7 +14,7 @@
     "id": 1,
     "title": "Time to add some sprinkles.",
     "body": "Do you need some upgrades?",
-    "image": "/zinsky-pc-repair/images/TimeToUpgrade.jpg",
+    "image": "images/TimeToUpgrade.jpg",
     "modalData": {
       "title": "Time to add some sprinkles.",
       "header": "Do you need some upgrades?",
@@ -25,7 +25,7 @@
     "id": 2,
     "title": "Replace an old system.",
     "body": "Is it time for a new system?",
-    "image": "/zinsky-pc-repair/images/ComputerCommunications.jpg",
+    "image": "images/ComputerCommunications.jpg",
     "modalData": {
       "title": "Replace an old system.",
       "header": "Is it time for a new system?",
