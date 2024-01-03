@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Zinsky's PC Repair and Configurations",
   "main": "index.js",
-  "homepage-production": "https://zinskyspcrepair.com/",
-  "homepage": "http://www.jpedgar.com/zinsky-pc-repair/",
+  "homepage": "https://zinskyspcrepair.com/",
+  "homepage-dev": "http://www.jpedgar.com/zinsky-pc-repair/",
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
