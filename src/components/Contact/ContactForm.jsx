@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 
 import { Form, Button, Row, Col } from "react-bootstrap";
 import ReCAPTCHA from "react-google-recaptcha";
@@ -10,9 +10,7 @@ import { emailValidator, phoneValidator, formatPhoneNumber } from "../../utils";
 
 const ContactForm = () => {
   const formData = useRef();
-  // console.log(process.env);
   const key = process.env.REACT_APP_GOOGLE_RECAPTCYA_KEY;
-  // const key = "6LerTyopAAAAAC_b7F0PwU6i6e-R9rgneKWBqEI4";
   const { formInfo, setFormInfo, clearForm } = useFormContext();
   const [recap, setRecap] = useState(null);
   const [errorFlag, setErrorFlag] = useState({
@@ -86,39 +84,30 @@ const ContactForm = () => {
 
     setErrorFlag(returnError);
 
-    // if (!hasErrorFlag) {
-    //   emailjs
-    //     .sendForm(
-    //       process.env.REACT_APP_EMAILJS_SERVICE_ID,
-    //       process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-    //       formData.current,
-    //       // {...tempData},
-    //       process.env.REACT_APP_EMAILJS_USER_ID
-    //     )
-    //     .then(
-    //       (result) => {
-    //         console.log(result.text);
-    //       },
-    //       (error) => {
-    //         console.log(error.text);
-    //       }
-    //     );
-    // }
+    if (!hasErrorFlag) {
+      emailjs
+        .sendForm(
+          process.env.REACT_APP_EMAILJS_SERVICE_ID,
+          process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+          formData.current,
+          process.env.REACT_APP_EMAILJS_USER_ID
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+    }
   };
 
   const handleRecaptcha = (capData) => {
     setRecap(capData);
   };
 
-  // useEffect(() => {
-  //   console.log(formInfo);
-  // }, [formInfo]);
-
-  // useEffect(() => {
-  //   console.log(errorFlag);
-  // }, [errorFlag]);
-
-  const style = { borderColor: "red" };
+  const errorStyle = { borderColor: "red" };
 
   return (
     <>
@@ -138,7 +127,7 @@ const ContactForm = () => {
               name="firstName"
               value={formInfo.firstName}
               onChange={handleChange}
-              style={errorFlag.firstName ? style : {}}
+              style={errorFlag.firstName ? errorStyle : {}}
             />
           </Col>
           <Col xs="12" md="6">
@@ -151,7 +140,7 @@ const ContactForm = () => {
               name="lastName"
               value={formInfo.lastName}
               onChange={handleChange}
-              style={errorFlag.lastName ? style : {}}
+              style={errorFlag.lastName ? errorStyle : {}}
             />
           </Col>
         </Form.Group>
@@ -166,7 +155,7 @@ const ContactForm = () => {
             name="email"
             value={formInfo.email}
             onChange={handleChange}
-            style={errorFlag.email ? style : {}}
+            style={errorFlag.email ? errorStyle : {}}
           />
           {emailError && (
             <Form.Text className="text-danger">{emailError}</Form.Text>
@@ -183,7 +172,7 @@ const ContactForm = () => {
             name="phone"
             value={formInfo.phone}
             onChange={handleChange}
-            style={errorFlag.phone ? style : {}}
+            style={errorFlag.phone ? errorStyle : {}}
           />
           {phoneError && (
             <Form.Text className="text-danger">{phoneError}</Form.Text>
@@ -234,7 +223,7 @@ const ContactForm = () => {
               name="otherDescription"
               value={formInfo.otherDescription}
               onChange={handleChange}
-              style={errorFlag.message ? style : {}}
+              style={errorFlag.message ? errorStyle : {}}
             />
           </Form.Group>
         </Form.Group>
@@ -259,7 +248,7 @@ const ContactForm = () => {
           <Button
             variant="primary"
             type="submit"
-            // disabled={!recap}
+            disabled={!recap}
             className="me-2"
             style={{ minWidth: "100px" }}
           >
