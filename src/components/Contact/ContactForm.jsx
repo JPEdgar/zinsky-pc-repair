@@ -1,17 +1,38 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 import { Form, Button, Row, Col } from "react-bootstrap";
 import ReCAPTCHA from "react-google-recaptcha";
+import emailjs from "@emailjs/browser";
 
 import { useFormContext } from "../../context/FormContext";
 
+import { emailValidator, phoneValidator, formatPhoneNumber } from "../../utils";
+
 const ContactForm = () => {
-  const key = "6LerTyopAAAAAC_b7F0PwU6i6e-R9rgneKWBqEI4";
+  const formData = useRef();
+  // console.log(process.env);
+  const key = process.env.REACT_APP_GOOGLE_RECAPTCYA_KEY;
+  // const key = "6LerTyopAAAAAC_b7F0PwU6i6e-R9rgneKWBqEI4";
   const { formInfo, setFormInfo, clearForm } = useFormContext();
   const [recap, setRecap] = useState(null);
+  const [errorFlag, setErrorFlag] = useState({
+    firstName: false,
+    lastName: false,
+    phone: false,
+    email: false,
+    otherDescription: false,
+  });
+  const [emailError, setEmailError] = useState("");
+  const [phoneError, setPhoneError] = useState("");
 
   const handleChange = (e) => {
-    setFormInfo((curr) => ({ ...curr, [e.target.name]: e.target.value }));
+    if (e.target.name === "phone") {
+      setFormInfo((curr) => ({
+        ...curr,
+        [e.target.name]: formatPhoneNumber(e),
+      }));
+    } else
+      setFormInfo((curr) => ({ ...curr, [e.target.name]: e.target.value }));
   };
 
   const handleCheck = (e) => {
@@ -19,61 +40,154 @@ const ContactForm = () => {
     setFormInfo((curr) => ({ ...curr, [e.target.name]: value }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log("here")
-  }
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    let returnError = {
+      firstName: false,
+      lastName: false,
+      phone: false,
+      email: false,
+      message: false,
+    };
+    let hasErrorFlag = false;
+
+    if (!formInfo.firstName) {
+      returnError.firstName = true;
+      hasErrorFlag = true;
+    }
+    if (!formInfo.lastName) {
+      returnError.lastName = true;
+      hasErrorFlag = true;
+    }
+    if (!formInfo.phone) {
+      returnError.phone = true;
+      hasErrorFlag = true;
+    } else if (!phoneValidator(formInfo.phone)) {
+      returnError.phone = true;
+      hasErrorFlag = true;
+      setPhoneError("Invalid phone number.");
+    } else setPhoneError("");
+    if (!formInfo.email) {
+      returnError.email = true;
+      hasErrorFlag = true;
+      setEmailError("Email required.");
+    } else if (!emailValidator(formInfo.email)) {
+      returnError.email = true;
+      hasErrorFlag = true;
+      setEmailError("Invalid email.");
+    } else {
+      setEmailError("");
+    }
+    if (!formInfo.otherDescription) {
+      returnError.message = true;
+      hasErrorFlag = true;
+    }
+
+    setErrorFlag(returnError);
+
+    // if (!hasErrorFlag) {
+    //   emailjs
+    //     .sendForm(
+    //       process.env.REACT_APP_EMAILJS_SERVICE_ID,
+    //       process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+    //       formData.current,
+    //       // {...tempData},
+    //       process.env.REACT_APP_EMAILJS_USER_ID
+    //     )
+    //     .then(
+    //       (result) => {
+    //         console.log(result.text);
+    //       },
+    //       (error) => {
+    //         console.log(error.text);
+    //       }
+    //     );
+    // }
+  };
 
   const handleRecaptcha = (capData) => {
-    setRecap(capData)
-  }
+    setRecap(capData);
+  };
+
+  // useEffect(() => {
+  //   console.log(formInfo);
+  // }, [formInfo]);
+
+  // useEffect(() => {
+  //   console.log(errorFlag);
+  // }, [errorFlag]);
+
+  const style = { borderColor: "red" };
 
   return (
     <>
-      <Form style={{ minHeight: "100vh" }} onSubmit={handleSubmit}>
+      <Form
+        ref={formData}
+        style={{ minHeight: "100vh" }}
+        onSubmit={handleSubmit}
+      >
         <Form.Group as={Row} className="my-2">
           <Col xs="12" md="6">
-            <Form.Label className="mb-0">First Name</Form.Label>
+            <Form.Label className="mb-0">
+              First Name <Form.Text muted>(required)</Form.Text>
+            </Form.Label>
             <Form.Control
               type="text"
               placeholder="Enter first name"
               name="firstName"
               value={formInfo.firstName}
               onChange={handleChange}
+              style={errorFlag.firstName ? style : {}}
             />
           </Col>
           <Col xs="12" md="6">
-            <Form.Label className="mb-0">Last Name</Form.Label>
+            <Form.Label className="mb-0">
+              Last Name <Form.Text muted>(required)</Form.Text>
+            </Form.Label>
             <Form.Control
               type="text"
               placeholder="Enter last name"
               name="lastName"
               value={formInfo.lastName}
               onChange={handleChange}
+              style={errorFlag.lastName ? style : {}}
             />
           </Col>
         </Form.Group>
 
         <Form.Group className="mb-2">
-          <Form.Label className="mb-0">Email Address</Form.Label>
+          <Form.Label className="mb-0">
+            Email Address <Form.Text muted>(required)</Form.Text>
+          </Form.Label>
           <Form.Control
             type="email"
             placeholder="Enter email"
             name="email"
             value={formInfo.email}
             onChange={handleChange}
+            style={errorFlag.email ? style : {}}
           />
+          {emailError && (
+            <Form.Text className="text-danger">{emailError}</Form.Text>
+          )}
         </Form.Group>
 
         <Form.Group className="mb-2">
-          <Form.Label className="mb-0">Phone Number</Form.Label>
+          <Form.Label className="mb-0">
+            Phone Number <Form.Text muted>(required)</Form.Text>
+          </Form.Label>
           <Form.Control
             type="text"
-            placeholder="Enter phone number"
+            placeholder="Enter phone number (916) 555-1212"
             name="phone"
             value={formInfo.phone}
             onChange={handleChange}
+            style={errorFlag.phone ? style : {}}
           />
+          {phoneError && (
+            <Form.Text className="text-danger">{phoneError}</Form.Text>
+          )}
         </Form.Group>
 
         <Form.Text className="text-muted">
@@ -120,18 +234,32 @@ const ContactForm = () => {
               name="otherDescription"
               value={formInfo.otherDescription}
               onChange={handleChange}
+              style={errorFlag.message ? style : {}}
             />
           </Form.Group>
         </Form.Group>
 
-        {!recap && <ReCAPTCHA sitekey={key} onChange={(capData) => handleRecaptcha(capData)} />}
+        {!recap && (
+          <ReCAPTCHA
+            sitekey={key}
+            onChange={(capData) => handleRecaptcha(capData)}
+          />
+        )}
 
         <div className="mb-2">
+          {(errorFlag.firstName ||
+            errorFlag.lastName ||
+            errorFlag.phone ||
+            errorFlag.email ||
+            errorFlag.message) && (
+            <div className="text-danger">
+              Fix errors above before submitting.
+            </div>
+          )}
           <Button
             variant="primary"
-            type="submit" // production
-            
-            disabled={!recap}
+            type="submit"
+            // disabled={!recap}
             className="me-2"
             style={{ minWidth: "100px" }}
           >
