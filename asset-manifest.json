@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.a9887c17.css",
-    "main.js": "/static/js/main.ada71a79.js",
+    "main.js": "/static/js/main.c68ea308.js",
     "static/media/Logo_Zinsky_Outside.svg": "/static/media/Logo_Zinsky_Outside.13039eb14c3a80cb61cb56f52cfb22cf.svg",
     "static/media/Logo_Zinsky_Inside.svg": "/static/media/Logo_Zinsky_Inside.b5a38a1c775a3d2b752a22ea1d1bd936.svg",
     "index.html": "/index.html",
     "main.a9887c17.css.map": "/static/css/main.a9887c17.css.map",
-    "main.ada71a79.js.map": "/static/js/main.ada71a79.js.map"
+    "main.c68ea308.js.map": "/static/js/main.c68ea308.js.map"
   },
   "entrypoints": [
     "static/css/main.a9887c17.css",
-    "static/js/main.ada71a79.js"
+    "static/js/main.c68ea308.js"
   ]
 }
